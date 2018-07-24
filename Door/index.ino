@@ -1,25 +1,25 @@
-void index()
+void index() //runs when newData == true
 {
   delay(10);
   newData = false; //Set the data in the index char to be overwrittin
   delay(100);
-  Serial.print("Received Command: ");
-  Serial.println(imput);
+  // Serial.print("Received Command: "); //Depreciated
+  //Serial.println(imput); //Depreciated
 
   //commands
   //operation a
-  if (imput == "a")
+  if (imput == "a") //if the imput is a
   {
-    Serial.println("exc operation1");
+    //Serial.println("exc operation1"); //Depreciated
     operation1(0);
     
     if (OPERATION1COMPLETE == true)
     {
-      Serial.println("Operation complete");
+      //Serial.println("Operation complete"); //Depreciated
     }
     else
     {
-      Serial.println("Operation not completed!");
+      // Serial.println("Operation not completed!"); //Depreciated
     }
     OPERATION1COMPLETE = false;
   }
@@ -32,7 +32,7 @@ void index()
     else
     {
       imput = "";
-      Serial.println("That is not a command or it has not been added to my index yet.");
+      //Serial.println("That is not a command or it has not been added to my index yet."); //Depreciated
     }
-    imput = "";
+    imput = ""; //clear the imput
 }
